@@ -1,0 +1,13 @@
+body {
+    background-color: antiquewhite;
+    color: #333;
+    font-family: monospace;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+#logo {
+    height: 150px;
+}
