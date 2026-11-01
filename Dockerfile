@@ -22,6 +22,7 @@ WORKDIR /golang-dashboard
 
 # Copy only compiled app
 COPY --from=builder /dashboard .
+COPY --from=builder /golang-dashboard/static ./static
 
 # Port app uses
 EXPOSE 8080
