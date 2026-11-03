@@ -9,14 +9,8 @@ func main() {
 	dir := http.Dir("./static")
 	handler := http.FileServer(dir)
 	http.Handle("/", handler)
-	getSamba()
+	http.Handle("/files", http.FileServer(http.Dir("../../../")))
 
 	// Run on port 8080
 	log.Fatal(http.ListenAndServe(":8080", nil))
-}
-
-func getSamba() {
-	dir := http.Dir("../../../")
-	handler := http.FileServer(dir)
-	http.Handle("/files", handler)
 }
