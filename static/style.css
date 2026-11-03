@@ -1,13 +1,21 @@
 body {
-    background-color: antiquewhite;
-    color: #333;
+    background-color: #111;
+    color: antiquewhite;
     font-family: monospace;
 }
 
 #wrapper {
-    text-align: center;
+    padding: 4px;
 }
 
 #logo {
     height: 150px;
+}
+
+a {
+    color: steelblue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
