@@ -6,15 +6,17 @@ import (
 )
 
 func main() {
-	// Website directory
 	dir := http.Dir("./static")
-
-	// Handling the website directory as fileserver
 	handler := http.FileServer(dir)
-
-	// Set home as default
 	http.Handle("/", handler)
+	getSamba()
 
 	// Run on port 8080
 	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func getSamba() {
+	dir := http.Dir("../../../")
+	handler := http.FileServer(dir)
+	http.Handle("/files", handler)
 }
